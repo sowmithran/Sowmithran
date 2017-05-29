@@ -1,0 +1,19 @@
+
+
+<div class="center"><marquee><h3> <i class="material-icons">people</i><br>ALL EMPLOYEES</h3></marquee>
+<ul class="demo-list-three mdl-list">
+<li *ngFor="let item of items | async" (click)="select(item)" class="mdl-list__item mdl-list__item--three-line">
+<span class="mdl-list__item-primary-content">
+<i  class="material-icons">account_circle</i>
+<span class="mydesign"> {{item.name}}</span>
+</span>
+
+</li>
+</ul>
+<div class="move">
+ <div class="select" *ngIf="selecteduser">
+  <i class="material-icons">account_circle</i>    Name:  {{selecteduser.name}}<br><br> Age: {{selecteduser.age}}<br><br> 
+  Street:{{selecteduser.street}}<br> <br>City: {{selecteduser.city}} <br><br> Years Of Experience:{{selecteduser.yoe}}
+    </div>
+    </div></div>
+   

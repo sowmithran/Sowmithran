@@ -1,0 +1,24 @@
+
+<form (ngSubmit)="onsubmit(form1.value)" #form1="ngForm" novalidate>
+  <h1>Login </h1>
+
+
+  <input placeholder="Username" type="text" [(ngModel)]="username" name="user" required #name="ngModel">
+
+  <div *ngIf="name.errors && (name.dirty||name.touched)">
+    <div [hidden]="!name.errors.required">
+
+    </div>
+  </div>
+
+
+
+  <input placeholder="Password" type="password" [(ngModel)]="password" name="pwd" required #pwd="ngModel">
+  <div *ngIf="pwd.errors && (pwd.dirty||pwd.touched)">
+    <div [hidden]="!pwd.errors.required">
+
+    </div>
+  </div>
+  <button type="button" [disabled]="!form1.form.valid" (click)="login();"> login</button>
+
+</form>

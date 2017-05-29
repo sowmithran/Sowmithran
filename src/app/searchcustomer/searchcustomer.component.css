@@ -1,0 +1,11 @@
+.container{
+     text-align: center;  
+        align-items: center;
+  justify-content: center;
+  margin-bottom:70%;
+  padding-top: 18%;
+}
+p{
+    font-family: fantasy;
+    font-size: x-large;
+}

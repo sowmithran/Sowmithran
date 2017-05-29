@@ -1,0 +1,92 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <p> click Below to view Exisiting Employees</p><br>
+   <i class="material-icons">people</i>
+   <div class="mdl-tooltip">
+ all Employees
+</div>
+ <a class="mdl-navigation__link" routerLink="../allcustomer" RouterLinkActive="isActive">MY EMPLOYEES</a>
+   
+
+        <div class="container1">
+            <i class="material-icons">person_add</i><br>
+            <span class="mdl-typography--display-1-color-contrast">ADD CUSTOMER</span>
+            
+            <div align="myclass">
+            <form action="#" #f [formGroup]="userform" (ngsubmit)="onsubmit()" novalidate>
+
+                <div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+
+                        <input class="mdl-textfield__input" type="text" formControlName="name" />
+
+                        <label class="mdl-textfield__label" for="username">Name</label></div>
+
+                    <div *ngIf="userform.controls.name.touched">
+
+                        <div *ngIf="userform.controls['name'].hasError('required')">
+                            <span class="validators"> please enter the user name</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="number" formControlName="age" />
+                        <label class="mdl-textfield__label" for="username">Age</label></div>
+                    <div *ngIf="userform.controls.age.touched">
+                        <div *ngIf="userform.controls['age'].hasError('required')">
+                            <span class="validators"> please enter the Age</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" formControlName="street" />
+                        <label class="mdl-textfield__label" for="username">Street</label></div>
+                    <div *ngIf="userform.controls.street.touched">
+                        <div *ngIf="userform.controls['street'].hasError('required')">
+                            <span class="validators"> please enter the street</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+
+                        <input class="mdl-textfield__input" type="text" formControlName="city" />
+                        <label class="mdl-textfield__label" for="username">City</label></div>
+                    <div *ngIf="userform.controls.city.touched">
+                        <div *ngIf="userform.controls['city'].hasError('required')">
+                            <span class="validators"> please enter the City</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="number" formControlName="yoe">
+                        <label class="mdl-textfield__label" for="username">Years of experience</label></div>
+                    <div *ngIf="userform.controls.yoe.touched">
+                        <div *ngIf="userform.controls['yoe'].hasError('required')">
+                            <span class="validators"> please enter the years of experience</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <p>click to save></p> <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                    (click)="submit(userform)" [disabled]="!userform.valid" type="submit">
+  proceed
+</button><br>&emsp;
+                <i class="material-icons">save</i>
+
+
+
+            </form>
+
+        </div></div>

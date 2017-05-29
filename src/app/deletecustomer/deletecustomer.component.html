@@ -1,0 +1,32 @@
+
+
+    <div align="center"  class="design">
+      <p> Press the Delete Button To Delete User</p>   <i class="material-icons">delete</i>
+<table class="mdl-data-table mdl-js-data-table">
+  
+  <thead>
+
+    <tr>
+      <th  class="mdl-data-table__cell--non-numeric"> Name</th>
+      <th class="mdl-data-table__cell--non-numeric" >Age</th>    
+      <th class="mdl-data-table__cell--non-numeric">Street</th>
+      <th class="mdl-data-table__cell--non-numeric">City</th>
+      <th class="mdl-data-table__cell--non-numeric">Yoe</th>
+       <th class="mdl-data-table__cell--non-numeric">DELETE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let i of items | async">
+        
+      <td class="mdl-data-table__cell--non-numeric">{{i.name |json}} </td>
+      <td class="mdl-data-table__cell--non-numeric">{{i.age |json}} </td>
+      <td class="mdl-data-table__cell--non-numeric">{{i.street |json}} </td>
+      <td class="mdl-data-table__cell--non-numeric">{{i.city |json}} </td>
+      <td class="mdl-data-table__cell--non-numeric">{{i.yoe |json}} </td>
+       <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" (click)="delete(i.$key)">Delete</button>
+
+    </tr>
+
+
+  </tbody>
+</table></div>

@@ -1,0 +1,20 @@
+
+.design
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Times, serif;
+    -ms-grid-row-align: center;
+    align-items: center;
+    padding-top: 10%;
+}
+th{
+    font-family: Courier New, Courier, monospace;
+    font-size: 20%;
+    font-style: italic;
+}
+p{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: oblique;
+    color:blueviolet;
+}
+.material-icons{ font-size: 36px; }
